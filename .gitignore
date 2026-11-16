@@ -1,0 +1,37 @@
+# Python caches and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment files and local configuration
+.env
+.env.*
+!.env.example
+config.local.*
+
+# Private keys, certificates, credentials, connection strings, and tokens
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+id_rsa
+id_rsa.*
+**/secrets/
+**/secret/
+**/*secret*
+**/*secrets*
+**/*credential*
+**/*credentials*
+**/*token*
+**/*tokens*
+**/*connection-string*
+**/*connection_string*
+**/*connstr*
+**/*dsn*

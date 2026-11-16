@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "account": "A1",
+      "at": "2026-01-15",
+      "units": 12
+    },
+    {
+      "account": "A1",
+      "at": "2026-01-16",
+      "units": 8
+    }
+  ],
+  "contract": {
+    "free": 10,
+    "unit_price": 2.5,
+    "refund": 0
+  }
+}
