@@ -1,0 +1,171 @@
+{
+  "currency": "USD",
+  "rules_version": "2026-11-17.1",
+  "billing": {
+    "period": "month",
+    "timezone": "UTC",
+    "periods": ["2026-01", "2026-02", "2026-03"]
+  },
+  "accounts": ["acme", "globex", "initech"],
+  "contracts": [
+    {
+      "id": "SAAS-2026",
+      "version": 1,
+      "effective_from": "2026-01-01T00:00:00Z",
+      "effective_to": "2026-02-01T00:00:00Z",
+      "pricing": {
+        "api_calls": {
+          "free": 1000,
+          "tiers": [
+            {"up_to": 10000, "unit_price": "0.002"},
+            {"up_to": 100000, "unit_price": "0.0015"},
+            {"up_to": null, "unit_price": "0.001"}
+          ]
+        },
+        "storage_gb": {"unit_price": "0.10"},
+        "seats": {"unit_price": "15.00"}
+      }
+    },
+    {
+      "id": "SAAS-2026",
+      "version": 2,
+      "effective_from": "2026-02-01T00:00:00Z",
+      "pricing": {
+        "api_calls": {
+          "free": 2000,
+          "tiers": [
+            {"up_to": 10000, "unit_price": "0.0018"},
+            {"up_to": 100000, "unit_price": "0.0013"},
+            {"up_to": null, "unit_price": "0.0009"}
+          ]
+        },
+        "storage_gb": {"unit_price": "0.09"},
+        "seats": {"unit_price": "14.00"}
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_id": "evt-0001",
+      "account": "acme",
+      "at": "2026-01-31T23:59:59Z",
+      "metric": "api_calls",
+      "units": 6000,
+      "received_at": "2026-01-31T23:59:59Z"
+    },
+    {
+      "event_id": "evt-0002",
+      "account": "acme",
+      "at": "2026-02-01T00:00:00Z",
+      "metric": "api_calls",
+      "units": 6000,
+      "received_at": "2026-02-01T00:00:05Z"
+    },
+    {
+      "event_id": "evt-0003",
+      "account": "acme",
+      "at": "2026-01-04T00:00:00Z",
+      "metric": "seats",
+      "units": 25,
+      "received_at": "2026-01-04T00:00:00Z"
+    },
+    {
+      "event_id": "evt-0004",
+      "account": "acme",
+      "at": "2026-02-04T00:00:00Z",
+      "metric": "seats",
+      "units": 3,
+      "received_at": "2026-02-04T00:00:00Z"
+    },
+    {
+      "event_id": "evt-0005",
+      "account": "globex",
+      "at": "2026-01-20T10:00:00Z",
+      "metric": "storage_gb",
+      "units": 250.5,
+      "received_at": "2026-01-20T10:00:01Z"
+    },
+    {
+      "event_id": "evt-0006",
+      "account": "globex",
+      "at": "2026-02-20T10:00:00Z",
+      "metric": "storage_gb",
+      "units": 260.25,
+      "received_at": "2026-02-20T10:00:01Z"
+    },
+    {
+      "event_id": "evt-0007",
+      "account": "globex",
+      "at": "2026-01-20T10:00:00Z",
+      "metric": "storage_gb",
+      "units": 250.5,
+      "received_at": "2026-01-28T10:00:01Z"
+    },
+    {
+      "event_id": "evt-0008",
+      "account": "globex",
+      "at": "2026-02-21T00:00:00Z",
+      "metric": "api_calls",
+      "units": 40000,
+      "received_at": "2026-02-21T00:00:00Z"
+    },
+    {
+      "event_id": "evt-0009",
+      "account": "globex",
+      "at": "2026-01-22T00:00:00Z",
+      "metric": "api_calls",
+      "units": 200,
+      "received_at": "2026-01-22T00:00:00Z"
+    },
+    {
+      "event_id": "evt-0010",
+      "account": "initech",
+      "at": "2026-01-10T00:00:00Z",
+      "metric": "seats",
+      "units": 4,
+      "received_at": "2026-01-10T00:00:00Z"
+    },
+    {
+      "event_id": "evt-0011",
+      "account": "initech",
+      "at": "2026-01-11T00:00:00Z",
+      "operation": "remove",
+      "target_event_id": "evt-0010",
+      "received_at": "2026-03-05T00:00:00Z"
+    },
+    {
+      "event_id": "evt-0012",
+      "account": "initech",
+      "at": "2026-02-12T00:00:00Z",
+      "metric": "storage_gb",
+      "units": 60,
+      "received_at": "2026-03-05T00:00:00Z"
+    },
+    {
+      "event_id": "evt-0013",
+      "account": "initech",
+      "at": "2026-02-13T00:00:00Z",
+      "operation": "refund",
+      "target_event_id": "evt-0012",
+      "refund_ratio": "0.25",
+      "received_at": "2026-03-06T00:00:00Z"
+    },
+    {
+      "event_id": "evt-0014",
+      "account": "acme",
+      "at": "2026-02-05T00:00:00Z",
+      "operation": "refund",
+      "target_event_id": "evt-0001",
+      "refund_amount": "1.25",
+      "received_at": "2026-03-06T00:00:00Z"
+    },
+    {
+      "event_id": "evt-0015",
+      "account": "globex",
+      "at": "2026-02-28T23:59:59Z",
+      "metric": "api_calls",
+      "units": 50,
+      "received_at": "2026-03-02T00:00:00Z"
+    }
+  ]
+}
