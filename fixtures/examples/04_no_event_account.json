@@ -1,0 +1,13 @@
+{
+  "schema_version": "2.0-draft",
+  "billing_period": { "start": "2026-01-01", "end": "2026-01-31" },
+  "events": [],
+  "accounts": ["A4"],
+  "contract": {
+    "contract_id": "C-A4",
+    "versions": [
+      { "version": 1, "effective_from": "2026-01-01", "free_quota": 10, "currency": "USD",
+        "tiers": [ { "up_to": null, "unit_price": 2.5 } ] }
+    ]
+  }
+}

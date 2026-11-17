@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.0-draft",
+  "billing_period": { "start": "2026-01-01", "end": "2026-01-31" },
+  "events": [
+    { "event_id": "evt-0301", "account": "A3", "event_type": "usage",    "at": "2026-01-12", "ingested_at": "2026-01-12T08:00:00Z", "units": 10, "status": "active" },
+    { "event_id": "evt-0302", "account": "A3", "event_type": "refund",   "at": "2026-01-20", "ingested_at": "2026-01-20T08:00:00Z", "units": 4,  "amount": 10.0, "status": "active", "reason": "service-credit", "related_event_id": "evt-0301" }
+  ],
+  "contract": {
+    "contract_id": "C-A3",
+    "versions": [
+      { "version": 1, "effective_from": "2026-01-01", "free_quota": 0, "currency": "USD",
+        "tiers": [ { "up_to": null, "unit_price": 2.5 } ] }
+    ]
+  }
+}

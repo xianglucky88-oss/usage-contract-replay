@@ -19,3 +19,14 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
 The fixture is local and deterministic; no network or credentials are required.
+
+## Handoff documentation
+
+Maintenance handoff docs (Chinese) live in [`docs/`](docs/), start with
+[`docs/README.md`](docs/README.md):
+
+- data dictionary (raw events vs derived amounts), billing-period rule register,
+  replay compatibility matrix, retroactive contract change impact,
+  release/rollback runbook, minimal examples, and the proven-vs-gap analysis.
+- Target-schema examples are under `fixtures/examples/` and intentionally fail
+  on the current v1 engine; the existing `fixtures/input.json` remains the v1 golden input.

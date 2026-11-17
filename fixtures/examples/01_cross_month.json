@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.0-draft",
+  "billing_period": { "start": "2026-01-01", "end": "2026-02-28" },
+  "events": [
+    { "event_id": "evt-0101", "account": "A1", "event_type": "usage", "at": "2026-01-31", "ingested_at": "2026-01-31T10:00:00Z", "units": 12, "status": "active" },
+    { "event_id": "evt-0102", "account": "A1", "event_type": "usage", "at": "2026-02-01", "ingested_at": "2026-02-01T10:00:00Z", "units": 8,  "status": "active" }
+  ],
+  "contract": {
+    "contract_id": "C-A1",
+    "versions": [
+      { "version": 1, "effective_from": "2026-01-01", "free_quota": 10, "currency": "USD",
+        "tiers": [ { "up_to": null, "unit_price": 2.5 } ] }
+    ]
+  }
+}
